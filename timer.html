@@ -63,15 +63,15 @@
       </button>
     </div>
     <script>
-      var inpHr = document.querySelector("#hour");
-      var inpMin = document.querySelector("#minute");
-      var inpSec = document.querySelector("#second");
-      var hr = document.querySelectorAll(".hr");
-      var min = document.querySelectorAll(".min");
-      var sec = document.querySelectorAll(".sec");
-      var milsec = document.querySelectorAll(".milsec");
-      var form = document.querySelector("form");
-      var err = document.querySelector("#Error");
+      let inpHr = document.querySelector("#hour");
+      let inpMin = document.querySelector("#minute");
+      let inpSec = document.querySelector("#second");
+      let hr = document.querySelectorAll(".hr");
+      let min = document.querySelectorAll(".min");
+      let sec = document.querySelectorAll(".sec");
+      let milsec = document.querySelectorAll(".milsec");
+      let form = document.querySelector("form");
+      let err = document.querySelector("#Error");
       form.addEventListener("submit", setTime);
       hr[0].style.display = "none";
       hr[1].style.display = "none";
@@ -152,10 +152,10 @@
       }
 
       function incrementTime() {
-        if (milsec1 === 0) {
-          if (milsec2 === 0) {
-            if (Sec === 0) {
-              if (Min === 0) {
+        if (milsec1 == 0) {
+          if (milsec2 == 0) {
+            if (Sec == 0) {
+              if (Min == 0) {
                 Min = 60;
                 hr[0].display = "inline";
                 Hr--;
@@ -180,11 +180,11 @@
           playRing();
           return;
         }
-        if (Min === 0) {
+        if (Min == 0) {
           min[0].style.display = "none";
           min[1].style.display = "none";
         }
-        if (Hr === 0) {
+        if (Hr == 0) {
           hr[0].style.display = "none";
           hr[1].style.display = "none";
         }
